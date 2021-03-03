@@ -1,0 +1,114 @@
+.search {
+  background: rgb(250, 106, 35);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 106, 35, 1) 0%,
+    rgba(227, 56, 39, 1) 60%
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  #submit {
+    background: white;
+    border: none;
+    width: 45px;
+    height: 48px;
+    border-radius: 2px;
+    padding: 0;
+    margin: 0 -10px;
+  }
+
+  .search-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      position: absolute;
+      path {
+        fill: rgb(250, 106, 35);
+      }
+    }
+  }
+
+  .search-input-container {
+    position: relative;
+
+    .search-input-wrapper {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-evenly;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      outline: none;
+      padding: 0.1rem;
+      margin: 1rem;
+      border-radius: 2px;
+      text-indent: 35px;
+      font-size: smaller;
+      color: white;
+      min-width: 550px;
+
+      .search-autocomplete-box {
+        background-color: white;
+        position: absolute;
+        display: block;
+        top: 10px;
+        width: 670px;
+        z-index: 2;
+        margin-left: 69px;
+        border-radius: 3px;
+        ul {
+          cursor: pointer;
+          padding: 0;
+          margin: 0;
+          font-size: small;
+          list-style: none;
+          li:first-child {
+            padding-bottom: 1px;
+            border-bottom: 1px solid rgb(214, 213, 213);
+            h1 {
+              margin-left: 46px;
+              form svg {
+                position: absolute;
+                top: 10px;
+              }
+            }
+          }
+          li:not(:first-child) {
+            padding: 0.7rem 1rem 0.7rem 3rem;
+          }
+          li {
+            .autocomplete-header {
+              padding-left: 3rem;
+            }
+            text-align: justify;
+            h4 {
+              color: grey;
+              font-weight: 400;
+              padding-bottom: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .search-input {
+    background: transparent;
+    color: white;
+    height: 43px;
+    font-weight: 600;
+    vertical-align: middle;
+    font-size: 15px;
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      opacity: 1; /* Firefox */
+      font-weight: 600;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+  }
+}
