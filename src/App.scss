@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     svg {
       position: absolute;
       path {
@@ -50,35 +51,52 @@
       color: white;
       min-width: 550px;
 
+      .search-autocomplete-box svg {
+        top: 22px;
+        left: 35px;
+      }
+
       .search-autocomplete-box {
         background-color: white;
         position: absolute;
         display: block;
         top: 10px;
-        width: 670px;
+        width: 500px;
         z-index: 2;
         margin-left: 69px;
         border-radius: 3px;
+        color: black;
+
         ul {
           cursor: pointer;
           padding: 0;
           margin: 0;
           font-size: small;
           list-style: none;
+
           li:first-child {
             padding-bottom: 1px;
             border-bottom: 1px solid rgb(214, 213, 213);
+            padding-top: 8px;
+
             h1 {
               margin-left: 46px;
+
               form svg {
                 position: absolute;
-                top: 10px;
+                top: 18px;
               }
             }
+
+            h4 {
+              margin-left: 46px;
+            }
           }
+
           li:not(:first-child) {
             padding: 0.7rem 1rem 0.7rem 3rem;
           }
+
           li {
             .autocomplete-header {
               padding-left: 3rem;
